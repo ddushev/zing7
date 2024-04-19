@@ -7,7 +7,16 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#01303A",
+        greenish: "#083C2F",
+        grayish: "#3C4A47",
+      },
+      fontFamily: {
+        grotesk: ["Space Grotesk", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
