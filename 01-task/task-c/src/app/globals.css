@@ -2,10 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@layer base {
+  html {
+    font-family: "Space Grotesk", sans-serif;
+    color: #01303a;
+  }
+}
+
+@layer components {
+  .basic-border {
+    @apply border-solid border-2 border-black;
+  }
+}
