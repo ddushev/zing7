@@ -10,8 +10,8 @@ function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     // Header
-    <header className="container mx-auto mt-6 px-4">
-      <nav className="flex justify-between">
+    <header className="container mx-auto mt-6 mb-20 px-4">
+      <nav className="flex justify-between px-2 shadow-xl lg:shadow-none">
         <div className="flex items-center font-grotesk font-bold text-2xl p-2 hover:bg-primary hover:text-white rounded tracking-tight">
           <a href="#">Website</a>
         </div>
@@ -29,7 +29,7 @@ function Header() {
             <span className={cx("absolute transition-all top-0 left-0 w-6 h-0.5 bg-primary translate-y-[7px]", { 'hamburger-middle': isMobileMenuOpen })}></span>
             <span className={cx("absolute transition-all top-0 left-0 w-6 h-0.5 bg-primary translate-y-[14px]", { 'hamburger-bottom': isMobileMenuOpen })}></span>
           </button>
-          <div className={cx("absolute flex-col py-8 space-y-6 left-6 right-6", { 'flex': isMobileMenuOpen, 'hidden': !isMobileMenuOpen })}>
+          <div className={cx("absolute flex-col py-8 mt-10 space-y-6 left-5 right-5 shadow-xl z-10 bg-white", { 'flex': isMobileMenuOpen, 'hidden': !isMobileMenuOpen })}>
             <MiddleNav />
             <CtaNav />
           </div>
