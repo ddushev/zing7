@@ -11,7 +11,7 @@ function Header() {
   return (
     // Header
     <header className="container mx-auto mt-6 mb-20 px-4">
-      <nav className="flex justify-between px-2 shadow-xl lg:shadow-none">
+      <nav className="flex justify-between px-4 shadow-xl lg:shadow-none">
         <div className="flex items-center font-grotesk font-bold text-2xl p-2 hover:bg-primary hover:text-white rounded tracking-tight">
           <a href="#">Website</a>
         </div>
