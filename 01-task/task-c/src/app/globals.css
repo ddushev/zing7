@@ -20,4 +20,19 @@
   .basic-border {
     @apply border-solid border-2 border-black;
   }
+  .hamburger {
+    @apply translate-y-0;
+  }
+
+  .hamburger .hamburger-top {
+    @apply rotate-45 translate-y-1.5 translate-x-1.5;
+  }
+
+  .hamburger .hamburger-middle {
+    @apply hidden;
+  }
+
+  .hamburger .hamburger-bottom {
+    @apply -rotate-45 translate-y-1.5 translate-x-1.5;
+  }
 }
