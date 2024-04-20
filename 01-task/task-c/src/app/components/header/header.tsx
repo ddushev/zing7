@@ -1,9 +1,15 @@
+'use client';
+
+import { useState } from "react";
+import cx from "classnames";
+
 function Header() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     // Header
     <header className="container mx-auto mt-6 px-4">
       <nav className="flex justify-between">
-        <div className="flex items-center font-grotesk font-bold text-2xl tracking-tight">
+        <div className="flex items-center font-grotesk font-bold text-2xl p-2 hover:bg-primary hover:text-white rounded tracking-tight">
           <a href="#">Website</a>
         </div>
         {/* Desktop Menu */}
@@ -21,12 +27,12 @@ function Header() {
         </div>
         {/* Mobile menu */}
         <div className="lg:hidden">
-          <button type="button" className="transition-all w-6 h-6 relative lg:hidden">
+          <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} type="button" className="transition-all w-6 h-6 relative">
             <span className="absolute top-0 left-0 w-6 h-0.5 bg-primary transition-all rotate-0"></span>
             <span className="absolute top-0 left-0 w-6 h-0.5 bg-primary transition-all rotate-0 translate-y-2"></span>
             <span className="absolute top-0 left-0 w-6 h-0.5 bg-primary transition-all rotate-0 translate-y-4"></span>
           </button>
-          <div className="absolute flex flex-col py-8 space-y-6 left-6 right-6">
+          <div className={cx("absolute flex-col py-8 space-y-6 left-6 right-6", { flex: isMobileMenuOpen, hidden: !isMobileMenuOpen })}>
             <a className="p-2 hover:bg-primary hover:text-white rounded text-greenish" href="#">Начало</a>
             <a className="p-2 hover:bg-primary hover:text-white rounded text-grayish" href="#">За нас</a>
             <a className="p-2 hover:bg-primary hover:text-white rounded text-grayish" href="#">Услуги</a>
