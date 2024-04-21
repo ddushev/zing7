@@ -12,7 +12,9 @@ const config: Config = {
         primary: "#01303A",
         greenish: "#083C2F",
         grayish: "#3C4A47",
-        ctaGray: "#394649",
+        grayCtaBg: "#394649",
+        grayInputText: "#7F8C89",
+        yellowSubmitBtn: "#E7F874",
       },
       fontFamily: {
         grotesk: ["Space Grotesk", "sans-serif"],
