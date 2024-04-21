@@ -12,6 +12,7 @@ const config: Config = {
         primary: "#01303A",
         greenish: "#083C2F",
         grayish: "#3C4A47",
+        ctaGray: "#394649",
       },
       fontFamily: {
         grotesk: ["Space Grotesk", "sans-serif"],
