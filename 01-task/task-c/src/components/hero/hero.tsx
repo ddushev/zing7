@@ -3,7 +3,7 @@ import truck from "/public/truck.png";
 
 function Hero() {
   return (
-    <section className="container flex flex-col mx-auto mb-20">
+    <section className="flex-col-container">
       <div className="flex justify-center">
         <h1 className="font-grotesk text-4xl tracking-tighter text-center mb-16 px-5 w-[930px] md:text-6xl lg:text-7xl">Гъвкави решения за сухопътен транспорт за всеки клиент</h1>
       </div>

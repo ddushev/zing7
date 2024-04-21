@@ -17,11 +17,18 @@
 }
 
 @layer components {
-  .basic-border {
-    @apply border-solid border-2 border-black;
+  /* Flex-col-container */
+  .flex-col-container {
+    @apply container flex flex-col mx-auto mb-20;
   }
+
+  /* Hamburger menu */
   .hamburger {
     @apply translate-y-0;
+  }
+
+  .hamburger-span {
+    @apply absolute transition-all top-0 left-0 w-6 h-0.5 bg-primary;
   }
 
   .hamburger .hamburger-top {
@@ -34,5 +41,15 @@
 
   .hamburger .hamburger-bottom {
     @apply -rotate-45 translate-y-1.5 translate-x-1.5;
+  }
+
+  /* Main section */
+
+  .main-text-container {
+    @apply flex flex-col gap-10 max-w-[80%] text-[16px] md:max-w-[70%] 2xl:max-w-[50%] lg:text-[18px];
+  }
+
+  .main-h2 {
+    @apply font-grotesk tracking-tighter font-semibold text-3xl md:text-4xl lg:text-5xl;
   }
 }
