@@ -17,9 +17,13 @@
 }
 
 @layer components {
-  /* Flex-col-container */
+  /* Global */
   .flex-col-container {
     @apply container flex flex-col mx-auto mb-20;
+  }
+
+  .h3-heading {
+    @apply font-grotesk tracking-tighter font-semibold text-3xl md:text-4xl lg:text-5xl;
   }
 
   /* Hamburger menu */
@@ -47,9 +51,5 @@
 
   .main-text-container {
     @apply flex flex-col gap-10 max-w-[80%] text-[16px] md:max-w-[70%] 2xl:max-w-[50%] lg:text-[18px];
-  }
-
-  .main-h3 {
-    @apply font-grotesk tracking-tighter font-semibold text-3xl md:text-4xl lg:text-5xl;
   }
 }
