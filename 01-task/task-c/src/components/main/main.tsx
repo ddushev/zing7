@@ -10,7 +10,7 @@ function Main() {
     'Спазване на изискванията за качество и стандарти на клиентите и/или на техни специфични изисквания.'
   ];
   return (
-    <main className="flex-col-container gap-16 items-center">
+    <main className="flex-col-container gap-8 items-center md:gap-16">
       <div className="main-text-container">
         <h3 className="h3-heading">Решения</h3>
         <p>Фокусът ни върху клиентите е същността на нашата работа. Ние доставяме услуги за всички видове бизнес – от малки местни предприятия до мултинационални компании.</p>

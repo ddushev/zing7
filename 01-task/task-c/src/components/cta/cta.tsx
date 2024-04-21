@@ -7,7 +7,7 @@ function Cta() {
   const [phone, setPhone] = useState('');
   return (
     <section className="px-6 bg-grayCtaBg">
-      <div className="text-white flex flex-col items-center text-center gap-12 max-w-[700px] mx-auto py-28">
+      <div className="text-white flex flex-col items-center text-center py-14 gap-8 max-w-[700px] mx-auto md:gap-12 md:py-28">
         <h2 className="font-grotesk tracking-tighter font-semibold text-4xl md:text-6xl lg:text-7xl">Готови ли сте да работим заедно?</h2>
         <p className="text-[18px] lg:text-[20px]">Оставете вашият телефон и ние ще се свържем с вас, за да отговорим на всички въпроси</p>
         <form onSubmit={() => alert(`Oчаквайте нашето обаждане на номер ${phone}`)}>

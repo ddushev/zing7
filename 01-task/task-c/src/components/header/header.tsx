@@ -10,7 +10,7 @@ function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     // Header
-    <header className="container mx-auto mt-6 mb-20 px-4">
+    <header className="container mx-auto px-4 mt-6 mb-10 md:mb-20">
       <nav className="flex justify-between px-4 shadow-xl lg:shadow-none lg:justify-center lg:gap-6 xl:gap-40 2xl:gap-60">
         <div className="flex items-center font-grotesk font-bold text-2xl p-2 hover:bg-primary hover:text-white rounded tracking-tight">
           <a href="#">Website</a>
