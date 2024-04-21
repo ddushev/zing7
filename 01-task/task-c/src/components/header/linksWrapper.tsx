@@ -1,6 +1,6 @@
 function LinksWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="hidden items-center space-x-4 lg:flex">
+    <div className="flex items-center gap-4">
       {children}
     </div>
   )
