@@ -1,9 +1,9 @@
 'use client'
-import Image from "next/image";
 import cx from "classnames";
 import { useState } from "react";
 import NavLink from "@/components/ui/navLink";
 import PrimaryButton from "@/components/ui/primaryButton";
+import CompanyLogo from "@/components/ui/companyLogo";
 
 
 function Header() {
@@ -15,7 +15,7 @@ function Header() {
       <div className="container max-w-[80%] flex justify-between mx-auto gap-16 md:max-w-[100%] md:justify-center xl:gap-72">
         <div className="flex items-center gap-8 xl:gap-24">
           <a className="flex-none" href="#">
-            <Image src="/Roooby.svg" width={95} height={28} alt="company-logo" />
+            <CompanyLogo />
           </a>
           {/* Desktop Menu */}
           <nav className="hidden md:block">
@@ -41,7 +41,7 @@ function Header() {
               </ul>
             </nav>
             <div className="flex flex-col gap-4 text-xs font-bold">
-              {buttons.map((text) => <PrimaryButton key={text} text={text} py="4" />)}
+              {buttons.map((text) => <PrimaryButton key={text} text={text} paddingY="4" />)}
             </div>
           </div>
         </div >
