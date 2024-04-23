@@ -3,11 +3,13 @@ import Image from "next/image";
 import cx from "classnames";
 import { useState } from "react";
 import NavLink from "@/components/ui/navLink";
+import PrimaryButton from "@/components/ui/primaryButton";
 
 
 function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navLinks = ["Product", "Pricing", "Company", "Resources", "Contact"];
+  const buttons = ["Log In", "Try for Free"];
   return (
     <header className="bg-zinc-100 py-6 shadow-xl md:shadow-none">
       <div className="container max-w-[80%] flex justify-between mx-auto gap-16 md:max-w-[100%] md:justify-center xl:gap-72">
@@ -23,12 +25,7 @@ function Header() {
           </nav>
         </div>
         <div className="hidden md:flex gap-5 text-xs font-bold">
-          <button className="px-5 py-2 rounded bg-white hover:bg-primary hover:text-white" type="button">
-            Log In
-          </button>
-          <button className="px-5 py-2 rounded bg-white hover:bg-primary hover:text-white" type="button">
-            Try for Free
-          </button>
+          {buttons.map((text) => <PrimaryButton key={text} text={text} />)}
         </div>
         {/* Mobile menu */}
         <div className="md:hidden">
@@ -44,12 +41,7 @@ function Header() {
               </ul>
             </nav>
             <div className="flex flex-col gap-4 text-xs font-bold">
-              <button className="px-5 py-4 rounded bg-white hover:bg-primary hover:text-white" type="button">
-                Log In
-              </button>
-              <button className="px-5 py-4 rounded bg-white hover:bg-primary hover:text-white" type="button">
-                Try for Free
-              </button>
+              {buttons.map((text) => <PrimaryButton key={text} text={text} py="4" />)}
             </div>
           </div>
         </div >
