@@ -8,7 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        primary: "#150050",
+        secondary: "#787878",
+        zinc: {
+          100: "#F4F4F4",
+        },
+      },
     },
   },
   plugins: [],
