@@ -2,11 +2,12 @@
 import Image from "next/image";
 import cx from "classnames";
 import { useState } from "react";
+import NavLink from "@/components/ui/navLink";
 
 
 function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const navLinks = ["Product", "Pricing", "Company", "Resources", "Contact"];
   return (
     <header className="bg-zinc-100 py-6 shadow-xl md:shadow-none">
       <div className="container max-w-[80%] flex justify-between mx-auto gap-16 md:max-w-[100%] md:justify-center xl:gap-72">
@@ -17,11 +18,7 @@ function Header() {
           {/* Desktop Menu */}
           <nav className="hidden md:block">
             <ul className="flex text-sm font-medium gap-4 lg:gap-9">
-              <li><a className="pb-2 border-black hover:border-b-4" href="#">Product</a></li>
-              <li><a className="pb-2 border-black hover:border-b-4" href="#">Pricing</a></li>
-              <li><a className="pb-2 border-black hover:border-b-4" href="#">Company</a></li>
-              <li><a className="pb-2 border-black hover:border-b-4" href="#">Resources</a></li>
-              <li><a className="pb-2 border-black hover:border-b-4" href="#">Contact</a></li>
+              {navLinks.map((text) => <NavLink key={text} text={text} />)}
             </ul>
           </nav>
         </div>
@@ -43,11 +40,7 @@ function Header() {
           <div className={cx("absolute flex-col gap-4 p-4 mt-10 left-5 right-5 shadow-xl z-10 bg-zinc-100", { 'flex': isMobileMenuOpen, 'hidden': !isMobileMenuOpen })}>
             <nav>
               <ul className="flex flex-col text-sm font-medium">
-                <li><a className="block p-4 hover:bg-black hover:text-white rounded" href="#">Product</a></li>
-                <li><a className="block p-4 hover:bg-black hover:text-white rounded" href="#">Pricing</a></li>
-                <li><a className="block p-4 hover:bg-black hover:text-white rounded" href="#">Company</a></li>
-                <li><a className="block p-4 hover:bg-black hover:text-white rounded" href="#">Resources</a></li>
-                <li><a className="block p-4 hover:bg-black hover:text-white rounded" href="#">Contact</a></li>
+                {navLinks.map((text) => <NavLink key={text} text={text} mobile />)}
               </ul>
             </nav>
             <div className="flex flex-col gap-4 text-xs font-bold">
