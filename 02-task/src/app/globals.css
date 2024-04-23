@@ -13,3 +13,26 @@
     color: #000000;
   }
 }
+
+@layer components {
+  /* Hamburger menu */
+  .hamburger {
+    @apply translate-y-0;
+  }
+
+  .hamburger-span {
+    @apply absolute transition-all top-0 left-0 w-6 h-0.5 bg-primary;
+  }
+
+  .hamburger .hamburger-top {
+    @apply rotate-45 translate-y-1.5 translate-x-1.5;
+  }
+
+  .hamburger .hamburger-middle {
+    @apply hidden;
+  }
+
+  .hamburger .hamburger-bottom {
+    @apply -rotate-45 translate-y-1.5 translate-x-1.5;
+  }
+}
