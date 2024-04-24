@@ -14,6 +14,9 @@ const config: Config = {
         zinc: {
           100: "#F4F4F4",
         },
+        yellow: {
+          400: "#FFE377",
+        },
       },
     },
   },

@@ -11,7 +11,7 @@ function Header() {
   const buttons = ["Log In", "Try for Free"];
   return (
     <header className="bg-zinc-100 py-5 shadow-xl md:shadow-none">
-      <div className="mx-auto grid grid-cols-12 lg:gap-4 lg:max-w-[1140px]">
+      <div className="container-grid">
         <a className="col-start-1" href="#">
           <CompanyLogo />
         </a>
@@ -22,7 +22,8 @@ function Header() {
           </ul>
         </nav>
         <div className="hidden mr-4 col-end-13 col-span-4 justify-end gap-5 text-xs font-bold md:flex">
-          {buttons.map((text) => <PrimaryButton key={text} text={text} />)}
+          <PrimaryButton text="Log In" bgColor="white" />
+          <PrimaryButton text="Try For Free" />
         </div>
         {/* Mobile menu */}
         <div className="col-end-13 justify-self-end content-center mr-4 md:hidden">
@@ -39,7 +40,8 @@ function Header() {
               </ul>
             </nav>
             <div className="flex flex-col gap-4 text-xs font-bold">
-              {buttons.map((text) => <PrimaryButton key={text} text={text} paddingY="4" />)}
+              <PrimaryButton text="Log In" bgColor="white" paddingY="4" />
+              <PrimaryButton text="Try For Free" paddingY="4" />
             </div>
           </div>
         </div >
