@@ -2,8 +2,8 @@ import cx from "classnames";
 
 function PrimaryButton({ text, paddingY = "2" }: { text: string, paddingY?: string }) {
   const buttonClass = cx(
-    "px-5",
-    "tracking-tight",
+    "px-6",
+    "tracking-[-0.2px]",
     "rounded",
     `py-${paddingY}`,
     "bg-white",
