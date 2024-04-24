@@ -16,8 +16,12 @@
 
 @layer components {
   /* Globals */
+  .outer-container {
+    @apply max-w-[1440px] mx-auto;
+  }
+
   .container-grid {
-    @apply mx-auto grid grid-cols-12 lg:gap-4 lg:max-w-[1140px] 2xl:max-w-[1600px];
+    @apply mx-auto grid grid-cols-12 lg:gap-4 lg:max-w-[1140px];
   }
 
   /* Hamburger menu */
