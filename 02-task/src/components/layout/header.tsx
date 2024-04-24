@@ -10,7 +10,7 @@ function Header() {
   const navLinks = ["Product", "Pricing", "Company", "Resources", "Contact"];
   const buttons = ["Log In", "Try for Free"];
   return (
-    <header className="bg-zinc-100 py-5 shadow-xl md:shadow-none">
+    <header className="bg-zinc-100 py-5 shadow-xl md:shadow-none pb-20">
       <div className="container-grid">
         <a className="col-start-1" href="#">
           <CompanyLogo />
