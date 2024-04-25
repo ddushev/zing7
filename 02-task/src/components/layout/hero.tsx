@@ -1,8 +1,20 @@
+"use client";
+import React, { FormEvent, useState } from 'react'
 import PrimaryButton from '@/components/ui/primaryButton'
 import Image from 'next/image'
-import React from 'react'
+import toast from 'react-hot-toast'
+import isEmailValid from '@/utils/isEmailValid';
 
 function Hero() {
+  const [email, setEmail] = useState("");
+  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isEmailValid(email)) {
+      setEmail("");
+      return toast.success("Check your email");
+    }
+    return toast.error("Enter valid email");
+  }
   return (
     <section className="bg-zinc-100">
       <div className="outer-container relative">
@@ -17,15 +29,16 @@ function Hero() {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <form className="flex flex-col gap-5">
+              <form onSubmit={submitHandler} className="flex flex-col gap-5">
                 <div className="text-lg tracking-[-0.25px] bg-white inline-block p-2 rounded">
-                  <input className="text-secondary p-2 focus:outline-none" type="email" name="email" id="email" placeholder="Enter your email" />
+                  <input className="text-secondary p-2 focus:outline-none" type="email" name="email" id="email" placeholder="Enter your email"
+                    value={email} onChange={(e) => setEmail(e.target.value)} />
                   <div className="hidden xs:inline-block">
-                    <PrimaryButton text="Try for Free" />
+                    <PrimaryButton text="Try for Free" submit />
                   </div>
                 </div>
                 <div className="inline-block xs:hidden">
-                  <PrimaryButton paddingY="4" text="Try for Free" />
+                  <PrimaryButton paddingY="4" text="Try for Free" submit />
                 </div>
               </form>
               <p className="text-sm text-neutral-700 pl-3">Full access. No credit card required.</p>
