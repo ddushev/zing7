@@ -5,8 +5,8 @@ import React from 'react'
 function Hero() {
   return (
     <section className="bg-zinc-100">
-      <div className="relative outer-container">
-        <div className="flex flex-col gap-10 items-center px-4 mx-auto lg:max-w-[1140px] 2xl:flex-row">
+      <div className="outer-container relative">
+        <div className="inner-container flex flex-col gap-10 items-center px-4 mx-auto 2xl:flex-row">
           <div className="flex flex-col items-center gap-16 text-center 2xl:text-left 2xl:md:w-1/2 2xl:items-baseline">
             <div className="flex flex-col gap-10 sm:max-2xl:w-[80%]">
               <h1 className="text-primary text-[50px] -tracking-[0.9px] leading-[74px] sm:text-[64px] font-bold 2xl:w-[640px] ">
