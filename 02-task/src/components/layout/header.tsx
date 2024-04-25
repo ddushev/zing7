@@ -10,8 +10,8 @@ function Header() {
   const navLinks = ["Product", "Pricing", "Company", "Resources", "Contact"];
   return (
     <header className="bg-zinc-100">
-      <div className="outer-container pb-20 py-5 shadow-xl md:shadow-none">
-        <div className="container-grid">
+      <div className="outer-container mx-auto pb-10 py-5 lg:pb-20">
+        <div className="container-grid shadow-xl md:shadow-none">
           <a className="col-start-1" href="#">
             <CompanyLogo />
           </a>
