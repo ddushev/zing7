@@ -3,10 +3,11 @@ import cx from "classnames";
 interface IPrimaryButton {
   text: string,
   paddingY?: "2" | "4",
-  bgColor?: "white" | "primary"
+  bgColor?: "white" | "primary",
+  submit?: boolean,
 }
 
-function PrimaryButton({ text, paddingY = "2", bgColor = "primary" }: IPrimaryButton) {
+function PrimaryButton({ text, paddingY = "2", bgColor = "primary", submit = false }: IPrimaryButton) {
   const buttonClass = cx(
     "px-6",
     "tracking-[-0.2px]",
@@ -18,7 +19,7 @@ function PrimaryButton({ text, paddingY = "2", bgColor = "primary" }: IPrimaryBu
     "hover:text-white"
   );
   return (
-    <button className={buttonClass} type="button">
+    <button className={buttonClass} type={submit ? "submit" : "button"}>
       {text}
     </button>
   )
