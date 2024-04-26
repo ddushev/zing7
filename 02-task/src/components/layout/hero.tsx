@@ -4,6 +4,7 @@ import PrimaryButton from '@/components/ui/primaryButton'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import isEmailValid from '@/utils/isEmailValid';
+import PartnerLogos from '../ui/partnerLogos';
 
 function Hero() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ function Hero() {
   return (
     <section className="bg-zinc-100">
       <div className="outer-container relative">
-        <div className="inner-container flex flex-col gap-10 items-center px-4 mx-auto 2xl:flex-row">
+        <div className="inner-container flex flex-col gap-10 items-center mb-16 2xl:mb-32 2xl:flex-row">
           <div className="flex flex-col items-center gap-16 text-center 2xl:text-left 2xl:md:w-1/2 2xl:items-baseline">
             <div className="flex flex-col gap-10 sm:max-2xl:w-[80%]">
               <h1 className="text-primary text-[50px] -tracking-[0.9px] leading-[74px] sm:text-[64px] font-bold 2xl:w-[640px] ">
@@ -48,8 +49,11 @@ function Hero() {
             <Image src="/Hero.png" width={600} height={675} alt="dashboard" priority />
           </div>
         </div>
+        <div className="inner-container flex flex-wrap justify-center items-center gap-12 pb-10 lg:gap-16 lg:pb-20">
+          <p className="tracking-[-0.2px] font-medium">Trusted by 1,000+ customers</p>
+          <PartnerLogos />
+        </div>
       </div>
-
     </section>
   )
 }
