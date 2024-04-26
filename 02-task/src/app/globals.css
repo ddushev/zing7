@@ -21,7 +21,7 @@
   }
 
   .inner-container {
-    @apply max-w-[1140px] mx-auto px-4;
+    @apply max-w-[1172px] mx-auto px-4;
   }
 
   .container-grid {
