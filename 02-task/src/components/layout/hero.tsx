@@ -49,7 +49,7 @@ function Hero() {
             <Image src="/Hero.png" width={600} height={675} alt="dashboard" priority />
           </div>
         </div>
-        <div className="inner-container flex flex-wrap justify-center items-center gap-12 pb-10 lg:gap-16 lg:pb-20">
+        <div className="inner-container flex flex-wrap justify-center items-center gap-12 pb-10 lg:gap-16 lg:pb-20 min-[1145px]:justify-between">
           <p className="tracking-[-0.2px] font-medium">Trusted by 1,000+ customers</p>
           <PartnerLogos />
         </div>
