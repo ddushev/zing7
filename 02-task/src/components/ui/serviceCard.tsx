@@ -16,7 +16,7 @@ interface IServiceCardProps {
 function ServiceCard({ src, width, height, alt, heading, text }: IServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="rounded-lg w-[374px] bg-[#1E0A57] hover:bg-yellow-400 hover:text-black">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="rounded-lg w-[374px] bg-[#1E0A57] hover:bg-yellow-400 hover:text-black hover:translate-y-[-15px] hover transition-all">
       <div className="w-[90%] mx-auto mb-20">
         <div className="size-20 mt-16 mb-14">
           <Image className={isHovered ? "invert" : ""} src={src} width={width} height={height} alt={alt} style={{ width: "auto", height: "auto" }} />
