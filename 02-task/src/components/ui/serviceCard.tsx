@@ -1,7 +1,7 @@
 "use client";
 import cx from "classnames";
 import Image from "next/image"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 interface IServiceCardProps {
@@ -16,9 +16,9 @@ interface IServiceCardProps {
 function ServiceCard({ src, width, height, alt, heading, text }: IServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="rounded-lg w-[374px] bg-[#1E0A57] hover:bg-yellow-400 hover:text-black hover:translate-y-[-15px] hover transition-all">
-      <div className="w-[90%] mx-auto mb-20">
-        <div className="size-20 mt-16 mb-14">
+    <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="rounded-lg xs:w-[374px] h-[439px] bg-[#1E0A57] hover:bg-yellow-400 hover:text-black hover:translate-y-[-15px] hover transition-all">
+      <div className="w-[90%] mx-auto">
+        <div className="size-20 mt-8 mb-7 sm:mt-16 sm:mb-14">
           <Image className={isHovered ? "invert" : ""} src={src} width={width} height={height} alt={alt} style={{ width: "auto", height: "auto" }} />
         </div>
         <div className={cx("h-[1px] bg-[#54457F]", { "bg-black": isHovered })}></div>

@@ -14,10 +14,9 @@ function Services() {
             <h2 className="text-5xl font-bold pb-14 sm:max-2xl:w-[80%]">Here&apos;s how Roooby can benefit your business</h2>
             <p className="text-lg font-normal max-w-[490px]">Build more meaningful and lasting relationships — better understand their needs, identify new opportunities to help, address any problems faster.</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-col items-center gap-3 lg:items-baseline lg:flex-row">
             {cardDetails.map((c) => <ServiceCard key={c.alt} src={c.src} width={c.width}
               alt={c.alt} height={c.height} heading={c.heading} text={c.text} />)}
-
           </div>
         </div>
       </div>
