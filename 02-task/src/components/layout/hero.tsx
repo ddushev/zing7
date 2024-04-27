@@ -46,7 +46,7 @@ function Hero() {
             </div>
           </div>
           <div className="2xl:absolute right-0">
-            <Image src="/Hero.png" width={600} height={675} alt="dashboard" priority />
+            <Image src="/Hero.png" width={600} height={675} alt="dashboard" style={{ width: "auto", height: "auto" }} priority />
           </div>
         </div>
         <div className="inner-container flex flex-wrap justify-center items-center gap-12 pb-10 lg:gap-16 lg:pb-20 min-[1145px]:justify-between">

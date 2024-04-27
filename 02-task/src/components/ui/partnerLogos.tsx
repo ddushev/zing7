@@ -11,7 +11,7 @@ function PartnerLogos() {
 
   return (
     <div className="flex flex-wrap justify-center gap-10 lg:gap-16">
-      {svgList.map((svg) => <Image key={svg.alt} src={svg.src} width={svg.width} height={svg.height} alt={svg.alt} />)}
+      {svgList.map((svg) => <Image key={svg.alt} src={svg.src} width={0} height={0} alt={svg.alt} style={{ width: svg.width, height: "auto" }} />)}
     </div>
   )
 }
